@@ -1,0 +1,21 @@
+{
+  "id": "f5cf9425-d069-4447-8dcd-9a1e96dc0443",
+  "uid": "est-et-odit",
+  "type": "publication",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Implement B2B niches",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Ut voluptate eu aliquip reprehenderit cupidatat proident Lorem.",
+        "spans": []
+      }
+    ]
+  }
+}
