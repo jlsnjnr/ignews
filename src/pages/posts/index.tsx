@@ -6,6 +6,7 @@ import { RichText } from 'prismic-dom'
 
 import { GetStaticProps } from 'next';
 import { getPrismicClient } from '../../services/prismic';
+import Link from 'next/link';
 
 type Post = {
   slug: string;
@@ -18,7 +19,6 @@ interface PostsProps {
   posts: Post[]
 } 
 
-
 export default function Posts({posts}: PostsProps ) {
   return (
     <>
@@ -29,11 +29,13 @@ export default function Posts({posts}: PostsProps ) {
       <main className={styles.container}> 
         <div className={styles.post}>
           {posts.map(post => (
-            <a key={post.slug} href='#'>
-              <time>{post.updatedAt}</time>
-              <strong>{post.title}</strong>
-              <p>{post.excerpt}</p>
-            </a>
+            <Link key={post.slug} href={`/posts/${post.slug}`}>
+              <a>
+                <time>{post.updatedAt}</time>
+                <strong>{post.title}</strong>
+                <p>{post.excerpt}</p>
+              </a>
+            </Link>
           ))}
         </div>
       </main>
@@ -63,10 +65,6 @@ export const getStaticProps: GetStaticProps = async () => {
       })
     };
   });
-
-  // console.log(response)
-  // para ver resposta interira
-  console.log(JSON.stringify(response, null, 2))
 
   return {
     props: {posts}
