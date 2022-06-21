@@ -15,9 +15,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React Icons
 - Sass
 - Stripe
+- Faunadb
+- Axios
+- Prismic
 
 ## 🚧 Projeto:
 
-Em construção
+Concluido
 
 Feito com ♥ by Joelson Junior
